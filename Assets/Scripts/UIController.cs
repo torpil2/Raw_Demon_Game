@@ -12,6 +12,11 @@ public class UIController : MonoBehaviour
     public GameObject deathScreen;
     public Slider ManaBarSlider;
     public Animator anim;
+    public GameObject nextLevelScreen;
+    public Image fadeScreen;
+
+    public float fadeSpeed;
+    private bool fadeToBlack, fadeOutBlack;
 
     private void Awake()
     {
@@ -20,12 +25,33 @@ public class UIController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ManaBarSlider.maxValue = PlayerController.instance.dashCooldown;   
+        ManaBarSlider.maxValue = PlayerController.instance.dashCooldown;
+        fadeOutBlack = true;
+        fadeToBlack = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        ///Screen Fade////
+       if(fadeOutBlack==true)
+        {
+            fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b, Mathf.MoveTowards(fadeScreen.color.a, 0f,fadeSpeed*Time.deltaTime));
+            if(fadeScreen.color.a==0f)
+            {
+                fadeOutBlack = false;
+            }
+        }
+
+        if(fadeToBlack==true)
+        {
+            fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b, Mathf.MoveTowards(fadeScreen.color.a, 1f, fadeSpeed * Time.deltaTime));
+            if (fadeScreen.color.a == 1f)
+            {
+                fadeToBlack = false;
+            }
+        }
+
 
         if (instance.ManaBarSlider.value >= 1)
         {
@@ -39,6 +65,10 @@ public class UIController : MonoBehaviour
         }
 
     }
-
+    public void StartFadeToBlack()
+    {
+        fadeToBlack = true;
+        fadeOutBlack = false;
+    }
 
 }

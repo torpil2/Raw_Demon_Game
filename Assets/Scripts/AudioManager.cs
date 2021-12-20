@@ -39,6 +39,11 @@ public class AudioManager : MonoBehaviour
         level1Music.Stop();
         winMusic.Play();
     }
+    public void StopLevelWin()
+    {
+        winMusic.Stop();
+        level1Music.Play();
+    }
 
     public void PlaySFX(int sfxToPlay)
     {
