@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
     [HideInInspector]
     public bool canMove = true;
-    
+    public Vector3 position;
 
     
 
@@ -54,12 +54,13 @@ public class PlayerController : MonoBehaviour
     {
         TheCam = Camera.main;
         demonMode.SetActive(false);
-
+        instance = this;
     }
 
     // Update is called once per frame
     void Update()
     {
+        position = transform.position;
         if (canMove && !LevelManager.instance.isPaused)
         {
             moveInput.x = Input.GetAxisRaw("Horizontal");

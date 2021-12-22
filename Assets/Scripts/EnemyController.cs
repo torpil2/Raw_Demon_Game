@@ -26,16 +26,21 @@ public class EnemyController : MonoBehaviour
     private float fireCounter;
     public float shootRange;
     public float DontShootRange;
+    public Vector3 pushBack;
 
     public SpriteRenderer theBody;
     public int damageSound;
+   // private Transform targetTransform;
 
 
+   // private float zOffset = 5f;   
 
     // Start is called before the first frame update
     void Start()
     {
-        
+      //  targetTransform.position = transform.position;
+
+
     }
 
     // Update is called once per frame
@@ -87,9 +92,37 @@ public class EnemyController : MonoBehaviour
 
     public void DamageEnemy(int damage)
     {
+        Vector3 pushXpos = new Vector3(0.5f, 0f, 0f);
+          Vector3 pushYpos = new Vector3(0f, 0.5f, 0f);
+
+        if(Mathf.Abs(Mathf.Round( PlayerController.instance.position.y)) >= Mathf.Abs(Mathf.Round( transform.position.y)))
+        {   
+
+        if ( PlayerController.instance.position.x <  transform.position.x)
+        {
+            transform.position += pushXpos;
+        }
+        else
+        {
+            transform.position -= pushXpos;
+        }
+        }
+        else if (Mathf.Abs(Mathf.Round(PlayerController.instance.position.y)) <= Mathf.Abs(Mathf.Round(transform.position.y)))
+        {                
         
+        if ( PlayerController.instance.position.y < transform.position.y)
+        {
+            transform.position += pushYpos;
+        }
+        else
+        {
+            transform.position -= pushYpos;
+        }
+        }
         health -= damage;
-        GameObject effect =  Instantiate(enemyImpactEffect, transform.position, transform.rotation);
+
+            GameObject effect =  Instantiate(enemyImpactEffect, transform.position, transform.rotation);
+
         AudioManager.instance.PlaySFX(damageSound);
         if (health <= 0)
         {
