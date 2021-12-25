@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    public static EnemyController instance;
+    public  EnemyController instance1;
     public Rigidbody2D theRB;
     public float moveSpeed;
 
@@ -30,6 +32,7 @@ public class EnemyController : MonoBehaviour
 
     public SpriteRenderer theBody;
     public int damageSound;
+    Camera cam;
    // private Transform targetTransform;
 
 
@@ -38,8 +41,9 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      //  targetTransform.position = transform.position;
-
+        instance = this;
+        //  targetTransform.position = transform.position;
+        cam = Camera.main;
 
     }
 
@@ -92,33 +96,41 @@ public class EnemyController : MonoBehaviour
 
     public void DamageEnemy(int damage)
     {
+        //push back when hit//////////////
         Vector3 pushXpos = new Vector3(0.5f, 0f, 0f);
-          Vector3 pushYpos = new Vector3(0f, 0.5f, 0f);
-
-        if(Mathf.Abs(Mathf.Round( PlayerController.instance.position.y)) >= Mathf.Abs(Mathf.Round( transform.position.y)))
-        {   
-
-        if ( PlayerController.instance.position.x <  transform.position.x)
+        Vector3 pushYpos = new Vector3(0f, 0.5f, 0f);
+       
+        Vector3 enemyscreenpoint = cam.WorldToScreenPoint(transform.position);
+        Vector3 playerscreenpoint = cam.WorldToScreenPoint(PlayerController.instance.position);
+        float xpointplayer = playerscreenpoint.x;
+        float ypointplayer = playerscreenpoint.y;
+        float xpointenemy = enemyscreenpoint.x;
+        float ypointenemy = enemyscreenpoint.y;
+        float ydiffplayerandenemy = Mathf.Abs(ypointplayer - ypointenemy);    
+     
+        if (xpointplayer > xpointenemy && ydiffplayerandenemy <= 100)
         {
-            transform.position += pushXpos;
-        }
-        else
-        {
+;
             transform.position -= pushXpos;
         }
-        }
-        else if (Mathf.Abs(Mathf.Round(PlayerController.instance.position.y)) <= Mathf.Abs(Mathf.Round(transform.position.y)))
-        {                
-        
-        if ( PlayerController.instance.position.y < transform.position.y)
+        else if (xpointplayer < xpointenemy && ydiffplayerandenemy <= 100) 
         {
+            transform.position += pushXpos;
+            
+        }
+
+        else if (ypointplayer < ypointenemy && ydiffplayerandenemy >= 100) 
+        {
+            
             transform.position += pushYpos;
         }
-        else
+        else if(ypointplayer > ypointenemy && ydiffplayerandenemy >= 100)
         {
+          
             transform.position -= pushYpos;
         }
-        }
+        
+
         health -= damage;
 
             GameObject effect =  Instantiate(enemyImpactEffect, transform.position, transform.rotation);
