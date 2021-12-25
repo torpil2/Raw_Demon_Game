@@ -21,7 +21,7 @@ public class PlayerHealthController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
+       currentHealth = maxHealth;
 
         UIController.instance.healthSlider.maxValue = maxHealth;
         UIController.instance.healthSlider.value = currentHealth;
@@ -31,8 +31,10 @@ public class PlayerHealthController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ÝnvincCount>0)
+       
+        if (ÝnvincCount>0)
         {
+
             ÝnvincCount -= Time.deltaTime;
 
             if(ÝnvincCount <= 0)
@@ -94,7 +96,8 @@ public class PlayerHealthController : MonoBehaviour
 
     public void MaxHealthPlus(int MaxHealAmount)
     {
-        maxHealth += MaxHealAmount;      
+        maxHealth += MaxHealAmount;   
+        
         
            
         
