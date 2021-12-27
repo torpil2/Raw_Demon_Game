@@ -17,7 +17,7 @@ public class LevelGenerator : MonoBehaviour
     public enum Direction {up,right,down,left};
     public Direction selectedDirection;
 
-    public float xOffset = 18, yOffset = 10;
+    public float xOffset = 22, yOffset = 12.002f;
 
     public LayerMask whatIsRoom;
 
@@ -106,10 +106,10 @@ public class LevelGenerator : MonoBehaviour
 
     public void CreateRoomOutline(Vector3 roomPosition)
     {
-        bool roomAbove = Physics2D.OverlapCircle(roomPosition + new Vector3(0f, yOffset, 0f), .2f, whatIsRoom);
-        bool roomBelow = Physics2D.OverlapCircle(roomPosition + new Vector3(0f, -yOffset, 0f), .2f, whatIsRoom);
-        bool roomLeft = Physics2D.OverlapCircle(roomPosition + new Vector3(-xOffset, 0f, 0f), .2f, whatIsRoom);
-        bool roomRight = Physics2D.OverlapCircle(roomPosition + new Vector3(xOffset, 0f, 0f), .2f, whatIsRoom);
+        bool roomAbove = Physics2D.OverlapCircle(roomPosition + new Vector3(0f, yOffset, 0f), .4f, whatIsRoom);
+        bool roomBelow = Physics2D.OverlapCircle(roomPosition + new Vector3(0f, -yOffset, 0f), .4f, whatIsRoom);
+        bool roomLeft = Physics2D.OverlapCircle(roomPosition + new Vector3(-xOffset, 0f, 0f), .4f, whatIsRoom);
+        bool roomRight = Physics2D.OverlapCircle(roomPosition + new Vector3(xOffset, 0f, 0f), .4f, whatIsRoom);
 
         int directionCount = 0;
         if(roomAbove)
