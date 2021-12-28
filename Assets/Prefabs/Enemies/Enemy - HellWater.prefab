@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4031335536569595213
+--- !u!1 &504090664094984670
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4031335536569595210}
-  - component: {fileID: 4031335536569595211}
+  - component: {fileID: 504090664094984665}
+  - component: {fileID: 504090664094984664}
   m_Layer: 10
   m_Name: Body
   m_TagString: Enemy
@@ -17,27 +17,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4031335536569595210
+--- !u!4 &504090664094984665
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4031335536569595213}
+  m_GameObject: {fileID: 504090664094984670}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4031335537124589966}
+  m_Father: {fileID: 504090664512986397}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4031335536569595211
+--- !u!212 &504090664094984664
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4031335536569595213}
+  m_GameObject: {fileID: 504090664094984670}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: -1860212189
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3016638612662664488, guid: d5cc4bc9c6ca0374e813ad0feec0ac50, type: 3}
+  m_Sprite: {fileID: -2408052495545595840, guid: d5cc4bc9c6ca0374e813ad0feec0ac50, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &4031335537124589970
+--- !u!1 &504090664512986369
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,41 +90,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4031335537124589966}
-  - component: {fileID: 4031335537124589969}
-  - component: {fileID: 4031335537124589968}
-  - component: {fileID: 4031335537124589971}
-  - component: {fileID: 4031335537124589967}
+  - component: {fileID: 504090664512986397}
+  - component: {fileID: 504090664512986370}
+  - component: {fileID: 504090664512986371}
+  - component: {fileID: 504090664512986368}
+  - component: {fileID: 504090664512986396}
+  - component: {fileID: 3534425784563246334}
   m_Layer: 10
-  m_Name: Enemy - HellHound
+  m_Name: Enemy - HellWater
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4031335537124589966
+--- !u!4 &504090664512986397
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4031335537124589970}
+  m_GameObject: {fileID: 504090664512986369}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.84, y: -0.44, z: 0}
+  m_LocalPosition: {x: 2.902714, y: -4.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4031335536569595210}
-  - {fileID: 4031335537134264552}
+  - {fileID: 504090664094984665}
+  - {fileID: 504090664515976315}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &4031335537124589969
+--- !u!61 &504090664512986370
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4031335537124589970}
+  m_GameObject: {fileID: 504090664512986369}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -144,26 +145,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.55, y: 0.79}
   m_EdgeRadius: 0
---- !u!114 &4031335537124589968
+--- !u!114 &504090664512986371
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4031335537124589970}
+  m_GameObject: {fileID: 504090664512986369}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e4a81cf8d23eeb40a4766e068dd9343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   instance1: {fileID: 0}
-  theRB: {fileID: 4031335537124589971}
+  theRB: {fileID: 504090664512986368}
   moveSpeed: 5
   shouldChasePlayer: 1
   rangeToChasePlayer: 7
   shouldRunAway: 0
   runAwayRange: 0
-  anim: {fileID: 4031335537124589967}
+  shouldWander: 1
+  wanderLength: 4
+  pauseLength: 1.5
+  anim: {fileID: 504090664512986396}
   health: 250
   deathSplatters:
   - {fileID: 1981257257817047577, guid: 38bc6169d40469a479f95b863636ebe2, type: 3}
@@ -172,23 +176,24 @@ MonoBehaviour:
   - {fileID: 8182738431577284358, guid: ee118c36124c4cd4fb8b278f043a6372, type: 3}
   dissapeartime: 5
   enemyImpactEffect: {fileID: 463081468338946328, guid: caa6d03feb7dab1458fc2a124a27ad08, type: 3}
-  shouldShoot: 1
+  shouldShoot: 0
+  shoudPush: 1
   bullet: {fileID: 9109351287289514602, guid: b9ded89f145b57648b84a237e0f8fc32, type: 3}
-  firepoint: {fileID: 4031335537134264552}
+  firepoint: {fileID: 504090664515976315}
   fireRate: 0.9
   shootRange: 7
   DontShootRange: 3
   pushBack: {x: 0, y: 0, z: 0}
-  theBody: {fileID: 4031335536569595211}
+  theBody: {fileID: 504090664094984664}
   damageSound: 1
---- !u!50 &4031335537124589971
+--- !u!50 &504090664512986368
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4031335537124589970}
+  m_GameObject: {fileID: 504090664512986369}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -202,14 +207,14 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!95 &4031335537124589967
+--- !u!95 &504090664512986396
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4031335537124589970}
+  m_GameObject: {fileID: 504090664512986369}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 71eaaed2244b48d498fcf610b0ea20df, type: 2}
@@ -221,7 +226,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &4031335537134264555
+--- !u!114 &3534425784563246334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504090664512986369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3976781d0e97d6044a8df9c7f4a17854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageToGive: 50
+--- !u!1 &504090664515976312
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -229,7 +247,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4031335537134264552}
+  - component: {fileID: 504090664515976315}
   m_Layer: 10
   m_Name: Firepoint
   m_TagString: Enemy
@@ -237,17 +255,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4031335537134264552
+--- !u!4 &504090664515976315
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4031335537134264555}
+  m_GameObject: {fileID: 504090664515976312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4031335537124589966}
+  m_Father: {fileID: 504090664512986397}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
