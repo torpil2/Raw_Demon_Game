@@ -1095,10 +1095,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   closeWhenEntered: 0
   doors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 9166866816261708954}
   - {fileID: 7738139773554410820}
+  - {fileID: 9166866816261708954}
   roomActive: 0
 --- !u!50 &1698254967448012920
 Rigidbody2D:
