@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 4031335537124589968}
   - component: {fileID: 4031335537124589971}
   - component: {fileID: 4031335537124589967}
+  - component: {fileID: 4648206128802402390}
   m_Layer: 10
   m_Name: Enemy - HellHound
   m_TagString: Enemy
@@ -160,9 +161,14 @@ MonoBehaviour:
   theRB: {fileID: 4031335537124589971}
   moveSpeed: 5
   shouldChasePlayer: 1
-  rangeToChasePlayer: 7
+  rangeToChasePlayer: 5
+  shouldPatrol: 0
+  patrolPoints: []
   shouldRunAway: 0
   runAwayRange: 0
+  shouldWander: 0
+  wanderLength: 0
+  pauseLength: 0
   anim: {fileID: 4031335537124589967}
   health: 250
   deathSplatters:
@@ -172,7 +178,8 @@ MonoBehaviour:
   - {fileID: 8182738431577284358, guid: ee118c36124c4cd4fb8b278f043a6372, type: 3}
   dissapeartime: 5
   enemyImpactEffect: {fileID: 463081468338946328, guid: caa6d03feb7dab1458fc2a124a27ad08, type: 3}
-  shouldShoot: 1
+  shouldShoot: 0
+  shouldPush: 1
   bullet: {fileID: 9109351287289514602, guid: b9ded89f145b57648b84a237e0f8fc32, type: 3}
   firepoint: {fileID: 4031335537134264552}
   fireRate: 0.9
@@ -221,6 +228,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4648206128802402390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4031335537124589970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3976781d0e97d6044a8df9c7f4a17854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageToGive: 50
 --- !u!1 &4031335537134264555
 GameObject:
   m_ObjectHideFlags: 0

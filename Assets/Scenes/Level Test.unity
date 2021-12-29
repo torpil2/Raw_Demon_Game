@@ -806,7 +806,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494224273}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -7.83, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1983112626}
@@ -815,7 +815,7 @@ Transform:
   - {fileID: 772437694}
   - {fileID: 1063471272}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &494224276
 BoxCollider2D:
@@ -990,7 +990,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7703557744109246496, guid: 5907a763d93100747a7a0a5aa17af94d, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7703557744109246496, guid: 5907a763d93100747a7a0a5aa17af94d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1034,8 +1034,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7703557744109246497, guid: 5907a763d93100747a7a0a5aa17af94d, type: 3}
       propertyPath: distanceToEnd
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7703557744109246497, guid: 5907a763d93100747a7a0a5aa17af94d, type: 3}
+      propertyPath: potentialCenters.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7703557744109246497, guid: 5907a763d93100747a7a0a5aa17af94d, type: 3}
+      propertyPath: potentialCenters.Array.data[1]
+      value: 
+      objectReference: {fileID: 9102323311156839985, guid: 63f34584025cd88489eae94105d5ae81, type: 3}
+    - target: {fileID: 7703557744109246497, guid: 5907a763d93100747a7a0a5aa17af94d, type: 3}
+      propertyPath: potentialCenters.Array.data[2]
+      value: 
+      objectReference: {fileID: 2540934689025266517, guid: 43b6f6014799883419edc1a712028ac7, type: 3}
+    - target: {fileID: 7703557744109246497, guid: 5907a763d93100747a7a0a5aa17af94d, type: 3}
+      propertyPath: potentialCenters.Array.data[3]
+      value: 
+      objectReference: {fileID: 7604304613152898822, guid: 38369bddb3222ce4fbfbd5ee27f56f1c, type: 3}
+    - target: {fileID: 7703557744109246497, guid: 5907a763d93100747a7a0a5aa17af94d, type: 3}
+      propertyPath: potentialCenters.Array.data[4]
+      value: 
+      objectReference: {fileID: 1356361618139545656, guid: af754c4705fc13e46bebfe91e7dcb0cf, type: 3}
+    - target: {fileID: 7703557744109246497, guid: 5907a763d93100747a7a0a5aa17af94d, type: 3}
+      propertyPath: potentialCenters.Array.data[5]
+      value: 
+      objectReference: {fileID: 1356361618139545656, guid: af754c4705fc13e46bebfe91e7dcb0cf, type: 3}
     - target: {fileID: 7703557744109246498, guid: 5907a763d93100747a7a0a5aa17af94d, type: 3}
       propertyPath: m_Name
       value: Level Generator

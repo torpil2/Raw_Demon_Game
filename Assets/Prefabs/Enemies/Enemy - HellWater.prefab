@@ -162,6 +162,8 @@ MonoBehaviour:
   moveSpeed: 5
   shouldChasePlayer: 1
   rangeToChasePlayer: 7
+  shouldPatrol: 0
+  patrolPoints: []
   shouldRunAway: 0
   runAwayRange: 0
   shouldWander: 1
@@ -177,7 +179,7 @@ MonoBehaviour:
   dissapeartime: 5
   enemyImpactEffect: {fileID: 463081468338946328, guid: caa6d03feb7dab1458fc2a124a27ad08, type: 3}
   shouldShoot: 0
-  shoudPush: 1
+  shouldPush: 0
   bullet: {fileID: 9109351287289514602, guid: b9ded89f145b57648b84a237e0f8fc32, type: 3}
   firepoint: {fileID: 504090664515976315}
   fireRate: 0.9
