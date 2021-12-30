@@ -54,10 +54,14 @@ public class EnemyController : MonoBehaviour
     public SpriteRenderer theBody;
     public int damageSound;
     Camera cam;
-   // private Transform targetTransform;
+
+    public bool shouldDropItem;
+    public GameObject[] itemsToDrop;
+    public float itemDropPercent;
+    // private Transform targetTransform;
 
 
-   // private float zOffset = 5f;   
+    // private float zOffset = 5f;   
 
     // Start is called before the first frame update
     void Start()
@@ -230,9 +234,21 @@ public class EnemyController : MonoBehaviour
             int selectedSplatter = Random.Range(0, 3);
             int rotation = Random.Range(0, 4);
             GameObject clone= Instantiate(deathSplatters[selectedSplatter], transform.position, Quaternion.Euler(0f,0f,rotation*90f));
-            
-           
-          //  Destroy((clone),5);         
+
+
+            //Item Drop on Enemies
+            if (shouldDropItem)
+            {
+                float dropChance = Random.Range(0f, 100f);
+                if (dropChance < itemDropPercent)
+                {
+                    int randomItem = Random.Range(0, itemsToDrop.Length);
+
+                    Instantiate(itemsToDrop[randomItem], transform.position, transform.rotation);
+                }
+
+            }
+            //  Destroy((clone),5);         
 
             // Instantiate(deathSplatter, transform.position, transform.rotation);
         }

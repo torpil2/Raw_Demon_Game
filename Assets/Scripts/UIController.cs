@@ -22,6 +22,7 @@ public class UIController : MonoBehaviour
     public string newGameScene, mainMenuScene;
 
     public GameObject pauseMenu;
+    public Text TotalCoin;
 
     private void Awake()
     {
@@ -33,6 +34,7 @@ public class UIController : MonoBehaviour
         ManaBarSlider.maxValue = PlayerController.instance.dashCooldown;
         fadeOutBlack = true;
         fadeToBlack = false;
+        TotalCoin.text = LevelManager.instance.currentCoins.ToString();
     }
 
     // Update is called once per frame
@@ -68,6 +70,7 @@ public class UIController : MonoBehaviour
         {
             anim.SetBool("ManaBarValueCheck", false);
         }
+       
 
     }
     public void StartFadeToBlack()

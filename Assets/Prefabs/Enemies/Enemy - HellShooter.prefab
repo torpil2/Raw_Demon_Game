@@ -105,6 +105,10 @@ MonoBehaviour:
   pushBack: {x: 0, y: 0, z: 0}
   theBody: {fileID: 9036533403272468634}
   damageSound: 1
+  shouldDropItem: 1
+  itemsToDrop:
+  - {fileID: 8041721216617605198, guid: 84f3759e3216215459869ac89b350d7b, type: 3}
+  itemDropPercent: 25
 --- !u!50 &9036533402619751490
 Rigidbody2D:
   serializedVersion: 4

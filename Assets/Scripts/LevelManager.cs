@@ -11,6 +11,8 @@ public class LevelManager : MonoBehaviour
 
     public bool isPaused;
 
+    public int currentCoins;
+
   //  public string nextLevel;
     
 
@@ -58,5 +60,21 @@ public class LevelManager : MonoBehaviour
             isPaused = false;
             Time.timeScale = 1f;
         }
+    }
+
+    public void GetCoins(int amount)
+    {
+        currentCoins += amount;
+        UIController.instance.TotalCoin.text = currentCoins.ToString();
+    }
+    public void SpendCoins(int amount)
+    {
+        if (currentCoins-amount >= 0)
+        {
+            currentCoins -= amount;
+        }
+        UIController.instance.TotalCoin.text = currentCoins.ToString();
+
+
     }
 }

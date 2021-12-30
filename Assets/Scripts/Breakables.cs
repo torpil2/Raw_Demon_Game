@@ -11,7 +11,7 @@ public class Breakables : MonoBehaviour
     public bool shouldDropItem;
     public GameObject[] itemsToDrop;
     public float itemDropPercent;
-    public int breakSound;
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +28,7 @@ public class Breakables : MonoBehaviour
     {
         if(other.tag == "PlayerBullet")
         {
-            AudioManager.instance.PlaySFX(breakSound);
+          
             Destroy(gameObject);
             int rotation = Random.Range(0, 4);
            GameObject broken =  Instantiate(brokenpiece, transform.position, Quaternion.Euler(0f, 0f, rotation * 90f));
